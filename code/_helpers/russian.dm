@@ -82,7 +82,7 @@ var/global/list/rkeys = list(
 //TEXT MODS RUS
 /proc/capitalize_cp1251(var/t as text)
     var/first = ascii2text(text2ascii(t))
-    return r_uppertext(first) + copytext(t, length(first) + 1)
+    return ruppertext(first) + copytext(t, length(first) + 1)
 
 /proc/intonation(text)
 	if (copytext(text,-1) == "!")
