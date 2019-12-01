@@ -64,7 +64,7 @@
 			return
 		else
 			choosecolor1 = uppertext(choosecolor1)
-			if (lentext(choosecolor1) != 6)
+			if (length(choosecolor1) != 6)
 				return
 			var/list/listallowed = list("A","B","C","D","E","F","1","2","3","4","5","6","7","8","9","0")
 			for (var/i = 1, i <= 6, i++)
@@ -82,7 +82,7 @@
 			return
 		else
 			choosecolor2 = uppertext(choosecolor2)
-			if (lentext(choosecolor2) != 6)
+			if (length(choosecolor2) != 6)
 				return
 			var/list/listallowed = list("A","B","C","D","E","F","1","2","3","4","5","6","7","8","9","0")
 			for (var/i = 1, i <= 6, i++)
@@ -553,7 +553,7 @@ obj/structure/altar/iron
 	set category = "Faction"
 	if (map && map.civilizations)
 
-		var/body = "<html><head><title>Religion List</title></head><b>RELIGION LIST</b><br><br>"
+		var/body = "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><title>Religion List</title></head><b>RELIGION LIST</b><br><br>"
 		for (var/rel in map.custom_religions)
 			body += "<b>[rel]</b>: [map.custom_religions[rel][3]] points.</br>"
 		body += {"<br>

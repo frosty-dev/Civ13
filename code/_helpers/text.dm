@@ -262,9 +262,9 @@
 //This is used for fingerprints
 /proc/stringmerge(var/text,var/compare,replace = "*")
 	var/newtext = text
-	if (lentext(text) != lentext(compare))
+	if (length(text) != length(compare))
 		return FALSE
-	for (var/i = TRUE, i < lentext(text), i++)
+	for (var/i = TRUE, i < length(text), i++)
 		var/a = copytext(text,i,i+1)
 		var/b = copytext(compare,i,i+1)
 		//if it isn't both the same letter, or if they are both the replacement character
@@ -284,7 +284,7 @@
 	if (!text || !character)
 		return FALSE
 	var/count = FALSE
-	for (var/i = TRUE, i <= lentext(text), i++)
+	for (var/i = TRUE, i <= length(text), i++)
 		var/a = copytext(text,i,i+1)
 		if (a == character)
 			count++
@@ -311,8 +311,8 @@
 //Used in preferences' SetFlavorText and human's set_flavor verb
 //Previews a string of len or less length
 proc/TextPreview(var/string,var/len=40)
-	if (lentext(string) <= len)
-		if (!lentext(string))
+	if (length(string) <= len)
+		if (!length(string))
 			return "\[...\]"
 		else
 			return string

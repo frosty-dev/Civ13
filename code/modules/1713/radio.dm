@@ -221,6 +221,7 @@ var/global/FREQ2 = rand(201,250)
 			<html>
 
 			<head>
+			<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
 			<style>
 			[common_browser_style]
 			</style>
@@ -254,6 +255,7 @@ var/global/FREQ2 = rand(201,250)
 				<html>
 
 				<head>
+				<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
 				<style>
 				[common_browser_style]
 				</style>
@@ -287,6 +289,7 @@ var/global/FREQ2 = rand(201,250)
 				<html>
 
 				<head>
+				<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
 				<style>
 				[common_browser_style]
 				</style>
@@ -319,6 +322,7 @@ var/global/FREQ2 = rand(201,250)
 				<html>
 
 				<head>
+				<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
 				<style>
 				[common_browser_style]
 				</style>
@@ -508,6 +512,7 @@ var/global/FREQ2 = rand(201,250)
 		<html>
 
 		<head>
+		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
 		<style>
 		[common_browser_style]
 		</style>

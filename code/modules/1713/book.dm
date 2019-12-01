@@ -111,10 +111,10 @@
 
 /obj/item/weapon/book/proc/show_content(var/mob/user, var/forceshow=0)
 	if (!(istype(user, /mob/living/carbon/human) || isghost(user) && !forceshow))
-		user << browse("<HTML><HEAD><TITLE>[title]</TITLE></HEAD><BODY>[stars(dat)]</BODY></HTML>", "window=[name]")
+		user << browse("<HTML><HEAD><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><TITLE>[title]</TITLE></HEAD><BODY>[stars(dat)]</BODY></HTML>", "window=[name]")
 		onclose(user, "[name]")
 	else
-		user << browse("<HTML><HEAD><TITLE>[title]</TITLE></HEAD><BODY>[dat]</BODY></HTML>", "window=[name]")
+		user << browse("<HTML><HEAD><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><TITLE>[title]</TITLE></HEAD><BODY>[dat]</BODY></HTML>", "window=[name]")
 		onclose(user, "[name]")
 
 /obj/item/weapon/book/verb/rename()

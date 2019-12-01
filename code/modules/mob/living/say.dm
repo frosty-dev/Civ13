@@ -36,21 +36,21 @@ var/list/department_radio_keys = list(
 
 	  //kinda localization -- rastaf0
 	  //same keys as above, but on russian keyboard layout. This file uses cp1251 as encoding.
-	  ":ê" = "right ear",	".ê" = "right ear",
-	  ":ä" = "left ear",	".ä" = "left ear",
-	  ":ø" = "intercom",	".ø" = "intercom",
+	  ":ï¿½" = "right ear",	".ï¿½" = "right ear",
+	  ":ï¿½" = "left ear",	".ï¿½" = "left ear",
+	  ":ï¿½" = "intercom",	".ï¿½" = "intercom",
 	 // ":b" = "harness", 	".b" = "harness", someone russian needs to handle this
-	  ":ð" = "department",	".ð" = "department",
-	  ":ñ" = "Command",		".ñ" = "Command",
-	  ":ò" = "Science",		".ò" = "Science",
-	  ":ü" = "Medical",		".ü" = "Medical",
-	  ":ó" = "crafting",	".ó" = "crafting",
-	  ":û" = "Security",	".û" = "Security",
-	  ":ö" = "whisper",		".ö" = "whisper",
-	  ":å" = "Mercenary",	".å" = "Mercenary",
-	  ":ã" = "Supply",		".ã" = "Supply",
-	  ":ì" = "Service",		".ì" = "Service",
-	  ":ç" = "AI Private",	".ç" = "AI Private",
+	  ":ï¿½" = "department",	".ï¿½" = "department",
+	  ":ï¿½" = "Command",		".ï¿½" = "Command",
+	  ":ï¿½" = "Science",		".ï¿½" = "Science",
+	  ":ï¿½" = "Medical",		".ï¿½" = "Medical",
+	  ":ï¿½" = "crafting",	".ï¿½" = "crafting",
+	  ":ï¿½" = "Security",	".ï¿½" = "Security",
+	  ":ï¿½" = "whisper",		".ï¿½" = "whisper",
+	  ":ï¿½" = "Mercenary",	".ï¿½" = "Mercenary",
+	  ":ï¿½" = "Supply",		".ï¿½" = "Supply",
+	  ":ï¿½" = "Service",		".ï¿½" = "Service",
+	  ":ï¿½" = "AI Private",	".ï¿½" = "AI Private",
 	  ":z" = "Entertainment",".z" = "Entertainment",
 )
 
@@ -85,8 +85,8 @@ proc/get_radio_key_from_channel(var/channel)
 	var/prefix = ""
 	for (var/rp in radio_prefixes)
 		if (dd_hasprefix(message, rp))
-			prefix = copytext(message, 1, lentext(rp)+1)
-			message = copytext(message, lentext(rp)+1, lentext(message)+1)
+			prefix = copytext(message, 1, length(rp)+1)
+			message = copytext(message, length(rp)+1, length(message)+1)
 
 	var/list/returns[3]
 	var/speech_problem_flag = FALSE
