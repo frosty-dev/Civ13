@@ -7,9 +7,9 @@
 	H.real_name = H.name
 
 /datum/job/spanish/captain
-	title = "Capit·n"
+	title = "Capit–±n"
 	en_meaning = "Ship Captain"
-	rank_abbreviation = "Capit·n"
+	rank_abbreviation = "Capit–±n"
 	head_position = TRUE
 	selection_color = "#2d2d63"
 	spawn_location = "JoinLateSPCap"
@@ -77,7 +77,7 @@
 
 	H.equip_to_slot_or_del(new /obj/item/weapon/material/sword/spadroon(H), slot_belt)
 	world << "<b><big>[H.real_name] is the Quartermaster of the Spanish Navy ship!</big></b>"
-	H.add_note("Role", "You are a <b>[title]</b>, an officer in charge of the ship's supply allocation. You are also the second in command, after the <b>Capit·n</b>.")
+	H.add_note("Role", "You are a <b>[title]</b>, an officer in charge of the ship's supply allocation. You are also the second in command, after the <b>Capit–±n</b>.")
 	H.setStat("strength", STAT_MEDIUM_HIGH)
 	H.setStat("crafting", STAT_NORMAL)
 	H.setStat("rifle", STAT_NORMAL)
@@ -332,7 +332,7 @@
 	else if (randweapon == 2)
 		H.equip_to_slot_or_del(new 	/obj/item/weapon/material/harpoon(H), slot_belt)
 
-	H.add_note("Role", "You are a <b>[title]</b>, a simple seaman employed by the Spanish Armada Real. Follow your <b>Capit·n</b> orders!")
+	H.add_note("Role", "You are a <b>[title]</b>, a simple seaman employed by the Spanish Armada Real. Follow your <b>Capit–±n</b> orders!")
 	H.setStat("strength", STAT_MEDIUM_HIGH)
 	H.setStat("crafting", STAT_MEDIUM_LOW)
 	H.setStat("rifle", STAT_MEDIUM_LOW) //muskets

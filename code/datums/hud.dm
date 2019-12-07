@@ -1,8 +1,8 @@
 /datum/hud
 	var/name
-	var/list/HUDneed//для "активных" элементов (прим. здоровье)
+	var/list/HUDneed//РґР»СЏ "Р°РєС‚РёРІРЅС‹С…" СЌР»РµРјРµРЅС‚РѕРІ (РїСЂРёРј. Р·РґРѕСЂРѕРІСЊРµ)
 //	var/list/HUDprocess = list()
-	var/list/slot_data//для инвентаря
+	var/list/slot_data//РґР»СЏ РёРЅРІРµРЅС‚Р°СЂСЏ
 	var/icon/icon = null
 	var/list/HUDfrippery
 	var/list/HUDoverlays

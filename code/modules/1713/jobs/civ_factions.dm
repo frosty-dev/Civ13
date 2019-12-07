@@ -1665,7 +1665,7 @@
 	return TRUE
 
 /datum/job/portuguese/civilian/officer
-	title = "Comandante da Milícia"
+	title = "Comandante da MilÐ½cia"
 	en_meaning = "Colony Security Leader"
 	rank_abbreviation = "Comandante"
 	selection_color = "#2d2d63"
@@ -1757,9 +1757,9 @@
 
 
 /datum/job/portuguese/civilian/medic
-	title = "Médico"
+	title = "MÐ¹dico"
 	en_meaning = "Colony Medic"
-	rank_abbreviation = "Médico"
+	rank_abbreviation = "MÐ¹dico"
 	selection_color = "#2d2d63"
 	spawn_location = "JoinLatePT"
 	SL_check_independent = TRUE
@@ -2653,7 +2653,7 @@
 	H.make_businessman()
 	return TRUE
 /datum/job/french/civilian/priest
-	title = "Prêtre"
+	title = "PrÐºtre"
 	en_meaning = "Colony Priest"
 	rank_abbreviation = ""
 	selection_color = "#2d2d63"

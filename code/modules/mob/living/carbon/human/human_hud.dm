@@ -44,8 +44,8 @@
 /mob/living/carbon/human/check_HUDdatum()//correct a datum?
 	var/mob/living/carbon/human/H = src
 
-	if (H.client.prefs.UI_style && !(H.client.prefs.UI_style == "")) //если у клиента моба прописан стиль\тип ХУДа
-		if (global.HUDdatums.Find(H.client.prefs.UI_style))//Если существует такой тип ХУДА
+	if (H.client.prefs.UI_style && !(H.client.prefs.UI_style == "")) //РµСЃР»Рё Сѓ РєР»РёРµРЅС‚Р° РјРѕР±Р° РїСЂРѕРїРёСЃР°РЅ СЃС‚РёР»СЊ\С‚РёРї РҐРЈР”Р°
+		if (global.HUDdatums.Find(H.client.prefs.UI_style))//Р•СЃР»Рё СЃСѓС‰РµСЃС‚РІСѓРµС‚ С‚Р°РєРѕР№ С‚РёРї РҐРЈР”Рђ
 			return TRUE
 
 	return FALSE
@@ -103,30 +103,30 @@
 	var/mob/living/carbon/human/H = src
 	var/datum/hud/human/HUDdatum = global.HUDdatums[H.defaultHUD]
 
-	for (var/HUDname in species.hud.ProcessHUD) //Добавляем Элементы ХУДа (не инвентарь)
-		if (!(HUDdatum.HUDneed.Find(HUDname))) //Ищем такой в датуме
+	for (var/HUDname in species.hud.ProcessHUD) //Р”РѕР±Р°РІР»СЏРµРј Р­Р»РµРјРµРЅС‚С‹ РҐРЈР”Р° (РЅРµ РёРЅРІРµРЅС‚Р°СЂСЊ)
+		if (!(HUDdatum.HUDneed.Find(HUDname))) //РС‰РµРј С‚Р°РєРѕР№ РІ РґР°С‚СѓРјРµ
 		//	log_debug("[usr] try create a [HUDname], but it no have in HUDdatum [HUDdatum.name]")
 		else
 			var/HUDtype = HUDdatum.HUDneed[HUDname]["type"]
 			var/obj/screen/HUD = new HUDtype(HUDname, HUDdatum.HUDneed[HUDname]["loc"], H, HUDdatum.HUDneed[HUDname]["icon"] ? HUDdatum.HUDneed[HUDname]["icon"] : HUDdatum.icon, HUDdatum.HUDneed[HUDname]["icon_state"] ? HUDdatum.HUDneed[HUDname]["icon_state"] : null)
-/*			if (HUDdatum.HUDneed[HUDname]["icon"])//Анализ на овверайд icon
+/*			if (HUDdatum.HUDneed[HUDname]["icon"])//РђРЅР°Р»РёР· РЅР° РѕРІРІРµСЂР°Р№Рґ icon
 				HUD.icon = HUDdatum.HUDneed[HUDname]["icon"]
 			else
 				HUD.icon = HUDdatum.icon
-			if (HUDdatum.HUDneed[HUDname]["icon_state"])//Анализ на овверайд icon_state
+			if (HUDdatum.HUDneed[HUDname]["icon_state"])//РђРЅР°Р»РёР· РЅР° РѕРІРІРµСЂР°Р№Рґ icon_state
 				HUD.icon_state = HUDdatum.HUDneed[HUDname]["icon_state"]*/
 			if (HUDdatum.HUDneed[HUDname]["hideflag"])
 				HUD.hideflag = HUDdatum.HUDneed[HUDname]["hideflag"]
-			H.HUDneed[HUD.name] += HUD//Добавляем в список худов
-			if (HUD.process_flag)//Если худ нужно процессить
-				H.HUDprocess += HUD//Вливаем в соотвествующий список
+			H.HUDneed[HUD.name] += HUD//Р”РѕР±Р°РІР»СЏРµРј РІ СЃРїРёСЃРѕРє С…СѓРґРѕРІ
+			if (HUD.process_flag)//Р•СЃР»Рё С…СѓРґ РЅСѓР¶РЅРѕ РїСЂРѕС†РµСЃСЃРёС‚СЊ
+				H.HUDprocess += HUD//Р’Р»РёРІР°РµРј РІ СЃРѕРѕС‚РІРµСЃС‚РІСѓСЋС‰РёР№ СЃРїРёСЃРѕРє
 
 	return
 /mob/living/carbon/human/create_HUDfrippery()
 	var/mob/living/carbon/human/H = src
 	var/datum/hud/human/HUDdatum = global.HUDdatums[H.defaultHUD]
 
-	//Добавляем Элементы ХУДа (украшения)
+	//Р”РѕР±Р°РІР»СЏРµРј Р­Р»РµРјРµРЅС‚С‹ РҐРЈР”Р° (СѓРєСЂР°С€РµРЅРёСЏ)
 	for (var/list/whistle in HUDdatum.HUDfrippery)
 		var/obj/screen/frippery/perdelka = new (whistle["icon_state"],whistle["loc"], whistle["dir"],H)
 		perdelka.icon = HUDdatum.icon

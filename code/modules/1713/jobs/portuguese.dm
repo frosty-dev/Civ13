@@ -6,9 +6,9 @@
 	H.real_name = H.name
 
 /datum/job/portuguese/captain
-	title = "Capit„o"
+	title = "Capit–≥o"
 	en_meaning = "Ship Captain"
-	rank_abbreviation = "Capit„o"
+	rank_abbreviation = "Capit–≥o"
 	head_position = TRUE
 	selection_color = "#2d2d63"
 	spawn_location = "JoinLatePTCap"
@@ -78,7 +78,7 @@
 
 	H.equip_to_slot_or_del(new /obj/item/weapon/material/sword/spadroon(H), slot_belt)
 	world << "<b><big>[H.real_name] is the Quartermaster of the Portuguese Navy ship!</big></b>"
-	H.add_note("Role", "You are a <b>[title]</b>, an officer in charge of the ship's supply allocation. You are also the second in command, after the <b>Capit„o</b>.")
+	H.add_note("Role", "You are a <b>[title]</b>, an officer in charge of the ship's supply allocation. You are also the second in command, after the <b>Capit–≥o</b>.")
 	H.setStat("strength", STAT_MEDIUM_HIGH)
 	H.setStat("crafting", STAT_NORMAL)
 	H.setStat("rifle", STAT_NORMAL)
@@ -174,9 +174,9 @@
 	return TRUE
 
 /datum/job/portuguese/surgeon
-	title = "MÈdico Naval"
+	title = "M–πdico Naval"
 	en_meaning = "Medic"
-	rank_abbreviation = "MÈdico"
+	rank_abbreviation = "M–πdico"
 	selection_color = "#2d2d63"
 	spawn_location = "JoinLatePTSurgeon"
 	SL_check_independent = TRUE
@@ -343,7 +343,7 @@
 	else if (randweapon == 2)
 		H.equip_to_slot_or_del(new 	/obj/item/weapon/material/harpoon(H), slot_belt)
 
-	H.add_note("Role", "You are a <b>[title]</b>, a simple seaman employed by the Portuguese Marinha Real. Follow your <b>Capit„o</b> orders!")
+	H.add_note("Role", "You are a <b>[title]</b>, a simple seaman employed by the Portuguese Marinha Real. Follow your <b>Capit–≥o</b> orders!")
 	H.setStat("strength", STAT_MEDIUM_HIGH)
 	H.setStat("crafting", STAT_MEDIUM_LOW)
 	H.setStat("rifle", STAT_MEDIUM_LOW) //muskets
@@ -442,7 +442,7 @@
 
 	return TRUE
 /datum/job/portuguese/field_medic
-	title = "MÈdico de Campo"
+	title = "M–πdico de Campo"
 	en_meaning = "Infantry Field Medic"
 	rank_abbreviation = "Dr."
 	selection_color = "#2d2d63"
@@ -521,9 +521,9 @@
 	return TRUE
 
 /datum/job/portuguese/chasseur
-	title = "CaÁador"
+	title = "Ca–∑ador"
 	en_meaning = "Light Infantry"
-	rank_abbreviation = "CaÁ."
+	rank_abbreviation = "Ca–∑."
 	selection_color = "#2d2d63"
 	spawn_location = "JoinLatePT"
 	SL_check_independent = TRUE

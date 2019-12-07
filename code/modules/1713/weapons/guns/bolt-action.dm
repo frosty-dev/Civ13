@@ -667,7 +667,7 @@
 	equiptimer = 15
 /obj/item/weapon/gun/projectile/boltaction/lebel
 	name = "Lebel 1886/M93"
-	desc = "A 8 round, bolt-action rifle, standard issue for french military, chambered in 8×50mmR Lebel."
+	desc = "A 8 round, bolt-action rifle, standard issue for french military, chambered in 8Ð§50mmR Lebel."
 	icon_state ="lebel"
 	item_state ="lebel"
 	base_icon = "lebel"
@@ -690,7 +690,7 @@
 	equiptimer = 16
 /obj/item/weapon/gun/projectile/boltaction/berthier
 	name = "Berthier M1907/15"
-	desc = "A 3 round, bolt-action carbine, chambered in 8×50mmR Lebel."
+	desc = "A 3 round, bolt-action carbine, chambered in 8Ð§50mmR Lebel."
 	icon_state ="berthier"
 	item_state ="berthier"
 	base_icon = "berthier"
@@ -713,7 +713,7 @@
 	equiptimer = 13
 /obj/item/weapon/gun/projectile/boltaction/berthier/m16
 	name = "Berthier M1907/16"
-	desc = "A 5 round, bolt-action carbine, chambered in 8×50mmR Lebel."
+	desc = "A 5 round, bolt-action carbine, chambered in 8Ð§50mmR Lebel."
 	magazine_type = /obj/item/ammo_magazine/c8x50_5clip
 	max_shells = 5
 	equiptimer = 13

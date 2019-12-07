@@ -23,13 +23,13 @@ return_angle()
 	Returns the direction (angle in degrees) the object is travelling in.
 
              (N)
-             90°
+             90Â°
               ^
               |
-  (W) 180° <--+--> 0° (E)
+  (W) 180Â° <--+--> 0Â° (E)
               |
               v
-             -90°
+             -90Â°
              (S)
 
 return_hypotenuse()

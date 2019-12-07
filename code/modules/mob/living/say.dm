@@ -36,21 +36,21 @@ var/list/department_radio_keys = list(
 
 	  //kinda localization -- rastaf0
 	  //same keys as above, but on russian keyboard layout. This file uses cp1251 as encoding.
-	  ":�" = "right ear",	".�" = "right ear",
-	  ":�" = "left ear",	".�" = "left ear",
-	  ":�" = "intercom",	".�" = "intercom",
+	  ":к" = "right ear",	".к" = "right ear",
+	  ":д" = "left ear",	".д" = "left ear",
+	  ":ш" = "intercom",	".ш" = "intercom",
 	 // ":b" = "harness", 	".b" = "harness", someone russian needs to handle this
-	  ":�" = "department",	".�" = "department",
-	  ":�" = "Command",		".�" = "Command",
-	  ":�" = "Science",		".�" = "Science",
-	  ":�" = "Medical",		".�" = "Medical",
-	  ":�" = "crafting",	".�" = "crafting",
-	  ":�" = "Security",	".�" = "Security",
-	  ":�" = "whisper",		".�" = "whisper",
-	  ":�" = "Mercenary",	".�" = "Mercenary",
-	  ":�" = "Supply",		".�" = "Supply",
-	  ":�" = "Service",		".�" = "Service",
-	  ":�" = "AI Private",	".�" = "AI Private",
+	  ":р" = "department",	".р" = "department",
+	  ":с" = "Command",		".с" = "Command",
+	  ":т" = "Science",		".т" = "Science",
+	  ":ь" = "Medical",		".ь" = "Medical",
+	  ":у" = "crafting",	".у" = "crafting",
+	  ":ы" = "Security",	".ы" = "Security",
+	  ":ц" = "whisper",		".ц" = "whisper",
+	  ":е" = "Mercenary",	".е" = "Mercenary",
+	  ":г" = "Supply",		".г" = "Supply",
+	  ":м" = "Service",		".м" = "Service",
+	  ":з" = "AI Private",	".з" = "AI Private",
 	  ":z" = "Entertainment",".z" = "Entertainment",
 )
 
