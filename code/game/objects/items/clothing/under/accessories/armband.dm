@@ -207,9 +207,9 @@
 			for (var/i = 1, i <= 6, i++)
 				var/numtocheck = 0
 				if (i < 6)
-					numtocheck = copytext(input,i,i+1)
+					numtocheck = copytext_char(input,i,i+1)
 				else
-					numtocheck = copytext(input,i,0)
+					numtocheck = copytext_char(input,i,0)
 				if (!(numtocheck in listallowed))
 					return
 			color = addtext("#",input)

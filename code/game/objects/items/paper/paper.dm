@@ -186,12 +186,12 @@
 			break
 
 	if (links)
-		var/before = copytext(info_links, TRUE, textindex)
-		var/after = copytext(info_links, textindex)
+		var/before = copytext_char(info_links, TRUE, textindex)
+		var/after = copytext_char(info_links, textindex)
 		info_links = before + text + after
 	else
-		var/before = copytext(info, TRUE, textindex)
-		var/after = copytext(info, textindex)
+		var/before = copytext_char(info, TRUE, textindex)
+		var/after = copytext_char(info, textindex)
 		info = before + text + after
 		updateinfolinks()
 

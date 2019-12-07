@@ -670,9 +670,9 @@ var/list/coefflist = list()
 
 	if (species.base_color && default_colour)
 		//Apply colour.
-		r_skin = hex2num(copytext(species.base_color,2,4))
-		g_skin = hex2num(copytext(species.base_color,4,6))
-		b_skin = hex2num(copytext(species.base_color,6,8))
+		r_skin = hex2num(copytext_char(species.base_color,2,4))
+		g_skin = hex2num(copytext_char(species.base_color,4,6))
+		b_skin = hex2num(copytext_char(species.base_color,6,8))
 	else
 		r_skin = FALSE
 		g_skin = FALSE
@@ -874,7 +874,7 @@ var/list/coefflist = list()
 		if (length(msg) <= 40)
 			return "<span class = 'notice'>[msg]</span>"
 		else
-			return "<span class = 'notice'>[copytext_preserve_html(msg, TRUE, 37)]... <a href='byond://?src=\ref[src];flavor_more=1'>More...</a></span>"
+			return "<span class = 'notice'>[copytext_char_preserve_html(msg, TRUE, 37)]... <a href='byond://?src=\ref[src];flavor_more=1'>More...</a></span>"
 	return ..()
 
 /mob/living/carbon/human/getDNA()

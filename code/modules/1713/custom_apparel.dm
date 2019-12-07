@@ -20,9 +20,9 @@
 			for (var/i = 1, i <= 6, i++)
 				var/numtocheck = 0
 				if (i < 6)
-					numtocheck = copytext(input,i,i+1)
+					numtocheck = copytext_char(input,i,i+1)
 				else
-					numtocheck = copytext(input,i,0)
+					numtocheck = copytext_char(input,i,0)
 				if (!(numtocheck in listallowed))
 					return
 			color = addtext("#",input)
@@ -54,9 +54,9 @@
 			for (var/i = 1, i <= 6, i++)
 				var/numtocheck = 0
 				if (i < 6)
-					numtocheck = copytext(input,i,i+1)
+					numtocheck = copytext_char(input,i,i+1)
 				else
-					numtocheck = copytext(input,i,0)
+					numtocheck = copytext_char(input,i,0)
 				if (!(numtocheck in listallowed))
 					return
 			color = addtext("#",input)
@@ -82,9 +82,9 @@
 			for (var/i = 1, i <= 6, i++)
 				var/numtocheck = 0
 				if (i < 6)
-					numtocheck = copytext(input,i,i+1)
+					numtocheck = copytext_char(input,i,i+1)
 				else
-					numtocheck = copytext(input,i,0)
+					numtocheck = copytext_char(input,i,0)
 				if (!(numtocheck in listallowed))
 					return
 			color = addtext("#",input)
@@ -189,9 +189,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				topcolor = addtext("#",input)
@@ -208,9 +208,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				undercolor = addtext("#",input)
@@ -259,9 +259,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				topcolor = addtext("#",input)
@@ -278,9 +278,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				undercolor = addtext("#",input)
@@ -296,9 +296,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				linescolor = addtext("#",input)
@@ -314,9 +314,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				handcolor = addtext("#",input)
@@ -370,9 +370,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				topcolor = addtext("#",input)
@@ -389,9 +389,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				undercolor = addtext("#",input)
@@ -407,9 +407,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				overcolor = addtext("#",input)
@@ -460,9 +460,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				topcolor = addtext("#",input)
@@ -479,9 +479,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				undercolor = addtext("#",input)
@@ -529,9 +529,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				topcolor = addtext("#",input)
@@ -548,9 +548,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				deccolor = addtext("#",input)
@@ -566,9 +566,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				linescolor = addtext("#",input)
@@ -618,9 +618,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				jacketcolor = addtext("#",input)
@@ -637,9 +637,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				crosscolor = addtext("#",input)
@@ -688,9 +688,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				shirtcolor = addtext("#",input)
@@ -707,9 +707,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				pantscolor = addtext("#",input)
@@ -760,9 +760,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				shirtcolor = addtext("#",input)
@@ -779,9 +779,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				pantscolor = addtext("#",input)
@@ -797,9 +797,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				epaulettescolor = addtext("#",input)
@@ -854,9 +854,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				capcolor = addtext("#",input)
@@ -873,9 +873,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				bandcolor = addtext("#",input)
@@ -891,9 +891,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				symbolcolor = addtext("#",input)
@@ -934,9 +934,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				capcolor = addtext("#",input)
@@ -982,9 +982,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				browncolor = addtext("#",input)
@@ -1000,9 +1000,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				greencolor = addtext("#",input)
@@ -1018,9 +1018,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				blackcolor = addtext("#",input)
@@ -1065,9 +1065,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				stripescolor = addtext("#",input)
@@ -1136,9 +1136,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				capcolor = addtext("#",input)
@@ -1155,9 +1155,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				bandcolor = addtext("#",input)

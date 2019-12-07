@@ -13,7 +13,7 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 	for (var/line in Lines)
 
 		if (!length(line))				continue
-		if (copytext(line,1,2) == "#")	continue
+		if (copytext_char(line,1,2) == "#")	continue
 
 		var/list/List = splittext(line,"+")
 		if (!List.len)					continue

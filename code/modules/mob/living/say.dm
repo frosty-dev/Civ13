@@ -85,8 +85,8 @@ proc/get_radio_key_from_channel(var/channel)
 	var/prefix = ""
 	for (var/rp in radio_prefixes)
 		if (dd_hasprefix(message, rp))
-			prefix = copytext(message, 1, length(rp)+1)
-			message = copytext(message, length(rp)+1, length(message)+1)
+			prefix = copytext_char(message, 1, length(rp)+1)
+			message = copytext_char(message, length(rp)+1, length(message)+1)
 
 	var/list/returns[3]
 	var/speech_problem_flag = FALSE
@@ -134,16 +134,16 @@ proc/get_radio_key_from_channel(var/channel)
 
 	var/message_mode = parse_message_mode(message, "headset")
 
-	switch(copytext(message,1,2))
-		if ("*") return emote(copytext(message,2))
-		if ("^") return custom_emote(1, copytext(message,2))
+	switch(copytext_char(message,1,2))
+		if ("*") return emote(copytext_char(message,2))
+		if ("^") return custom_emote(1, copytext_char(message,2))
 
 	//parse the radio code and consume it
 	if (message_mode)
 		if (message_mode == "headset")
-			message = copytext(message,2)	//it would be really nice if the parse procs could do this for us.
+			message = copytext_char(message,2)	//it would be really nice if the parse procs could do this for us.
 		else
-			message = copytext(message,3)
+			message = copytext_char(message,3)
 
 	message = trim_left(message)
 
@@ -152,7 +152,7 @@ proc/get_radio_key_from_channel(var/channel)
 		speaking = parse_language(message)
 
 	if (speaking)
-		message = copytext(message,2+length(speaking.key))
+		message = copytext_char(message,2+length(speaking.key))
 	else
 		speaking = get_default_language()
 

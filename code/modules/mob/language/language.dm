@@ -234,10 +234,10 @@
 				break
 			next = original_words[v]
 			// Save the ending character in case it's punctuation
-			var/ending = copytext(next, length(next))
+			var/ending = copytext_char(next, length(next))
 			var/add_ending = FALSE
 			// Check if the beginning of the word is capitalized
-			var/beginning = (copytext(next, 1, 2))
+			var/beginning = (copytext_char(next, 1, 2))
 			var/beginning_cap = (beginning == uppertext(beginning))
 			// Check if the word is in all caps
 			var/allcaps = (next == uppertext(next))
@@ -255,8 +255,8 @@
 				while (length(foreign_word) < length(next))
 					foreign_word += pick(syllables)
 				// Strip leading single quotes
-				if (copytext(foreign_word, 1, 2) == "'")
-					foreign_word = copytext(foreign_word, 2)
+				if (copytext_char(foreign_word, 1, 2) == "'")
+					foreign_word = copytext_char(foreign_word, 2)
 				next = foreign_word
 				// Preserve punctuation
 				if (ending in list("!","?",".",",","..."))
@@ -300,7 +300,7 @@
 
 /datum/language/proc/get_talkinto_msg_range(message)
 	// if you yell, you'll be heard from two tiles over instead of one
-	return (copytext(message, length(message)) == "!") ? 2 : TRUE
+	return (copytext_char(message, length(message)) == "!") ? 2 : TRUE
 
 /datum/language/proc/broadcast(var/mob/living/speaker,var/message,var/speaker_mask)
 	log_say("[key_name(speaker)] : ([name]) [message]")

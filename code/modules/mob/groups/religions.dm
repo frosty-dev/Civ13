@@ -70,9 +70,9 @@
 			for (var/i = 1, i <= 6, i++)
 				var/numtocheck = 0
 				if (i < 6)
-					numtocheck = copytext(choosecolor1,i,i+1)
+					numtocheck = copytext_char(choosecolor1,i,i+1)
 				else
-					numtocheck = copytext(choosecolor1,i,0)
+					numtocheck = copytext_char(choosecolor1,i,0)
 				if (!(numtocheck in listallowed))
 					return
 			choosecolor1 = addtext("#",choosecolor1)
@@ -88,9 +88,9 @@
 			for (var/i = 1, i <= 6, i++)
 				var/numtocheck = 0
 				if (i < 6)
-					numtocheck = copytext(choosecolor2,i,i+1)
+					numtocheck = copytext_char(choosecolor2,i,i+1)
 				else
-					numtocheck = copytext(choosecolor2,i,0)
+					numtocheck = copytext_char(choosecolor2,i,0)
 				if (!(numtocheck in listallowed))
 					return
 			choosecolor2 = addtext("#",choosecolor2)

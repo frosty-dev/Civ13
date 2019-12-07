@@ -201,7 +201,7 @@ proc/admin_notice(var/message, var/rights)
 	return "data/player_saves/"
 
 /datum/admins/proc/player_has_info(var/key as text)
-	var/savefile/info = new("[get_player_notes_file_dir()][copytext(key, TRUE, 2)]/[key]/info.sav")
+	var/savefile/info = new("[get_player_notes_file_dir()][copytext_char(key, TRUE, 2)]/[key]/info.sav")
 	var/list/infos
 	info >> infos
 	if (!infos || !infos.len) return FALSE
@@ -225,7 +225,7 @@ proc/admin_notice(var/message, var/rights)
 			break
 	dat +="<span style='color:#000000; font-weight: bold'>Player age: [p_age]</span><br>"
 
-	var/savefile/info = new("[get_player_notes_file_dir()][copytext(key, TRUE, 2)]/[key]/info.sav")
+	var/savefile/info = new("[get_player_notes_file_dir()][copytext_char(key, TRUE, 2)]/[key]/info.sav")
 	var/list/infos
 	info >> infos
 	if (!infos)
@@ -260,7 +260,7 @@ proc/admin_notice(var/message, var/rights)
 	for (var/t in jobban_keylist)
 		var/r = t
 		if ( findtext(r,"##") )
-			r = copytext( r, TRUE, findtext(r,"##") )//removes the description
+			r = copytext_char( r, TRUE, findtext(r,"##") )//removes the description
 		dat += text("<tr><td>[t] (<A href='?src=\ref[src];removejobban=[r]'>unban</A>)</td></tr>")
 	dat += "</table>"
 	usr << browse(dat, "window=ban;size=400x400")*/

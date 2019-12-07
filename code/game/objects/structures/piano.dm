@@ -242,12 +242,12 @@
 						return
 					if (length(note) == FALSE)
 						continue
-					//world << "Parse: [copytext(note,1,2)]"
+					//world << "Parse: [copytext_char(note,1,2)]"
 					var/cur_note = text2ascii(note) - 96
 					if (cur_note < 1 || cur_note > 7)
 						continue
 					for (var/i=2 to length(note))
-						var/ni = copytext(note,i,i+1)
+						var/ni = copytext_char(note,i,i+1)
 						if (!text2num(ni))
 							if (ni == "#" || ni == "b" || ni == "n")
 								cur_acc[cur_note] = ni
@@ -255,7 +255,7 @@
 								cur_acc[cur_note] = "#" // so shift is never required
 						else
 							cur_oct[cur_note] = ni
-					playnote(uppertext(copytext(note,1,2)) + cur_acc[cur_note] + cur_oct[cur_note])
+					playnote(uppertext(copytext_char(note,1,2)) + cur_acc[cur_note] + cur_oct[cur_note])
 				if (notes.len >= 2 && text2num(notes[2]))
 					sleep(song.tempo / text2num(notes[2]))
 				else
@@ -350,7 +350,7 @@
 			if (song.lines.len > MAX_LINES)
 				return
 			if (length(newline) > MAX_CHARS_PER_LINE)
-				newline = copytext(newline, TRUE, MAX_CHARS_PER_LINE)
+				newline = copytext_char(newline, TRUE, MAX_CHARS_PER_LINE)
 			song.lines.Add(newline)
 
 		else if (href_list["deleteline"])
@@ -365,7 +365,7 @@
 			if (!content)
 				return
 			if (length(content) > MAX_CHARS_PER_LINE)
-				content = copytext(content, TRUE, MAX_CHARS_PER_LINE)
+				content = copytext_char(content, TRUE, MAX_CHARS_PER_LINE)
 			if (num > song.lines.len || num < 1)
 				return
 			song.lines[num] = content
@@ -398,8 +398,8 @@
 				var/tempo = 5
 				if (!lines || !lines.len)
 					return
-				if (copytext(lines[1],1,6) == "BPM: ")
-					var/divisor = text2num(copytext(lines[1],6))
+				if (copytext_char(lines[1],1,6) == "BPM: ")
+					var/divisor = text2num(copytext_char(lines[1],6))
 					if (!divisor)
 						divisor = 1
 					tempo = 600 / divisor

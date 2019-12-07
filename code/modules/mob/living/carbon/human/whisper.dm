@@ -35,7 +35,7 @@
 	var/datum/language/speaking = parse_language(message)
 
 	if (speaking)
-		message = copytext(message,2+length(speaking.key))
+		message = copytext_char(message,2+length(speaking.key))
 	else
 		speaking = get_default_language()
 
@@ -91,7 +91,7 @@
 			continue
 
 	if (voice_sub == "Unknown")
-		if (copytext(message, TRUE, 2) != "*")
+		if (copytext_char(message, TRUE, 2) != "*")
 			var/list/temp_message = splittext(message, " ")
 			var/list/pick_list = list()
 			for (var/i = TRUE, i <= temp_message.len, i++)
@@ -102,12 +102,12 @@
 				temp_message[H] = ninjaspeak(temp_message[H])
 				pick_list -= H
 			message = jointext(temp_message, " ")
-			message = replacetext(message, "o", "¤")
-			message = replacetext(message, "p", "þ")
-			message = replacetext(message, "l", "£")
-			message = replacetext(message, "s", "§")
-			message = replacetext(message, "u", "µ")
-			message = replacetext(message, "b", "ß")
+			message = replacetext(message, "o", "ï¿½")
+			message = replacetext(message, "p", "ï¿½")
+			message = replacetext(message, "l", "ï¿½")
+			message = replacetext(message, "s", "ï¿½")
+			message = replacetext(message, "u", "ï¿½")
+			message = replacetext(message, "b", "ï¿½")
 
 	var/list/listening = hearers(message_range, src)
 	listening |= src

@@ -298,7 +298,7 @@
 	return FALSE
 
 /mob/proc/store_memory(msg as message, popup, sane = TRUE)
-	msg = copytext(msg, TRUE, MAX_MESSAGE_LEN)
+	msg = copytext_char(msg, TRUE, MAX_MESSAGE_LEN)
 
 	msg = replacetext(msg, "<i>", "")
 	msg = replacetext(msg, "</i>", "")
@@ -347,7 +347,7 @@
 		if (length(msg) <= 40)
 			return "<span class = 'notice'>[msg]</span>"
 		else
-			return "<span class = 'notice'>[copytext_preserve_html(msg, TRUE, 37)]... <a href='byond://?src=\ref[src];flavor_more=1'>More...</a></span>"
+			return "<span class = 'notice'>[copytext_char_preserve_html(msg, TRUE, 37)]... <a href='byond://?src=\ref[src];flavor_more=1'>More...</a></span>"
 
 /*
 /mob/verb/help()

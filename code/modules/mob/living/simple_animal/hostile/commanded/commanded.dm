@@ -26,7 +26,7 @@
 		var/text = command_buffer[2]
 		var/filtered_name = lowertext(html_decode(name))
 		if (dd_hasprefix(text,filtered_name))
-			var/substring = copytext(text,length(filtered_name)+1) //get rid of the name.
+			var/substring = copytext_char(text,length(filtered_name)+1) //get rid of the name.
 			listen(speaker,substring)
 		command_buffer.Remove(command_buffer[1],command_buffer[2])
 	. = ..()

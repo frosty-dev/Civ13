@@ -80,7 +80,7 @@
 				var/path = "SQL/bans/"
 				var/list/filenames = flist(path)
 				for (var/filename in filenames)
-					if (copytext(filename, length(filename)) != "/") // Ignore directories.
+					if (copytext_char(filename, length(filename)) != "/") // Ignore directories.
 						if (fexists(path + filename))
 							fulllist += "[path + filename]"
 				for (var/k in fulllist)

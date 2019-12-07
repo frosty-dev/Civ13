@@ -233,9 +233,9 @@
 			for (var/i = 1, i <= 6, i++)
 				var/numtocheck = 0
 				if (i < 6)
-					numtocheck = copytext(customcolor1,i,i+1)
+					numtocheck = copytext_char(customcolor1,i,i+1)
 				else
-					numtocheck = copytext(customcolor1,i,0)
+					numtocheck = copytext_char(customcolor1,i,0)
 				if (!(numtocheck in listallowed))
 					customcolor1 = "#000000"
 		customcolor2 = input(user, "Choose a secondary hex color (without the #):", "Tin Can Secondary Color" , "FFFFFF")
@@ -249,9 +249,9 @@
 			for (var/i = 1, i <= 6, i++)
 				var/numtocheck = 0
 				if (i < 6)
-					numtocheck = copytext(customcolor2,i,i+1)
+					numtocheck = copytext_char(customcolor2,i,i+1)
 				else
-					numtocheck = copytext(customcolor2,i,0)
+					numtocheck = copytext_char(customcolor2,i,0)
 				if (!(numtocheck in listallowed))
 					customcolor2 = "#FFFFFF"
 
@@ -270,9 +270,9 @@
 			for (var/i = 1, i <= 6, i++)
 				var/numtocheck = 0
 				if (i < 6)
-					numtocheck = copytext(customcolor,i,i+1)
+					numtocheck = copytext_char(customcolor,i,i+1)
 				else
-					numtocheck = copytext(customcolor,i,0)
+					numtocheck = copytext_char(customcolor,i,0)
 				if (!(numtocheck in listallowed))
 					return
 
@@ -322,9 +322,9 @@
 			for (var/i = 1, i <= 6, i++)
 				var/numtocheck = 0
 				if (i < 6)
-					numtocheck = copytext(customcolor,i,i+1)
+					numtocheck = copytext_char(customcolor,i,i+1)
 				else
-					numtocheck = copytext(customcolor,i,0)
+					numtocheck = copytext_char(customcolor,i,0)
 				if (!(numtocheck in listallowed))
 					return
 
@@ -362,9 +362,9 @@
 			for (var/i = 1, i <= 6, i++)
 				var/numtocheck = 0
 				if (i < 6)
-					numtocheck = copytext(customcolor,i,i+1)
+					numtocheck = copytext_char(customcolor,i,i+1)
 				else
-					numtocheck = copytext(customcolor,i,0)
+					numtocheck = copytext_char(customcolor,i,0)
 				if (!(numtocheck in listallowed))
 					return
 	else if (findtext(recipe.title, "oil deposit"))
@@ -868,9 +868,9 @@
 				for (var/i = 1, i <= 6, i++)
 					var/numtocheck = 0
 					if (i < 6)
-						numtocheck = copytext(input,i,i+1)
+						numtocheck = copytext_char(input,i,i+1)
 					else
-						numtocheck = copytext(input,i,0)
+						numtocheck = copytext_char(input,i,0)
 					if (!(numtocheck in listallowed))
 						return
 				O.color = addtext("#",input)

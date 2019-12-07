@@ -1,14 +1,8 @@
 //HTML ENCODE/DECODE + RUS TO CP1251 TODO: OVERRIDE html_encode after fix
 /proc/rhtml_encode(var/msg)
-	msg = jointext(splittext(msg, "<"), "&lt;")
-	msg = jointext(splittext(msg, ">"), "&gt;")
-	msg = jointext(splittext(msg, "�"), "&#255;")
 	return msg
 
 /proc/rhtml_decode(var/msg)
-	msg = jointext(splittext(msg, "&gt;"), ">")
-	msg = jointext(splittext(msg, "&lt;"), "<")
-	msg = jointext(splittext(msg, "&#255;"), "�")
 	return msg
 
 
@@ -53,16 +47,16 @@ sanitize_simple(var/t,var/list/repl_chars = list("\n"="#","\t"="#","�"="&#255;
 
 //RUS CONVERTERS
 /proc/russian_to_cp1251(var/msg)//CHATBOX
-	return jointext(splittext(msg, "�"), "&#255;")
+	return msg
 
 /proc/russian_to_utf8(var/msg)//PDA PAPER POPUPS
-	return jointext(splittext(msg, "�"), "&#1103;")
+	return msg
 
 /proc/utf8_to_cp1251(msg)
-	return jointext(splittext(msg, "&#1103;"), "&#255;")
+	return msg
 
 /proc/cp1251_to_utf8(msg)
-	return jointext(splittext(msg, "&#255;"), "&#1103;")
+	return msg
 
 var/global/list/rkeys = list(
 	"а" = "f", "в" = "d", "г" = "u", "д" = "l",
@@ -82,9 +76,9 @@ var/global/list/rkeys = list(
 //TEXT MODS RUS
 /proc/capitalize_cp1251(var/t as text)
     var/first = ascii2text(text2ascii(t))
-    return ruppertext(first) + copytext(t, length(first) + 1)
+    return ruppertext(first) + copytext_char(t, length(first) + 1)
 
 /proc/intonation(text)
-	if (copytext(text,-1) == "!")
+	if (copytext_char(text,-1) == "!")
 		text = "<b>[text]</b>"
 	return text
