@@ -606,7 +606,7 @@ window "mainwindow"
 		size = 640x440
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = #271a0c
+		background-color = #030201
 		saved-params = "splitter"
 		right = "rpane"
 		is-vert = true
@@ -646,15 +646,9 @@ window "outputwindow"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = #392611
+		background-color = #050301
 		saved-params = "pos;size;is-minimized;is-maximized"
-		titlebar = false
-		statusbar = false
-		can-close = false
-		can-minimize = false
-		can-resize = false
 		is-pane = true
-		can-scroll = vertical
 	elem "hotkey_toggle"
 		type = BUTTON
 		pos = 546,459
@@ -664,7 +658,7 @@ window "outputwindow"
 		font-family = "Book Antiqua"
 		font-size = 8
 		text-color = #e1e1d7
-		background-color = #392611
+		background-color = #050301
 		saved-params = "is-checked"
 		text = "Hotkey Toggle"
 		command = ".winset \"mainwindow.macro!=macro ? mainwindow.macro=macro hotkey_toggle.is-checked=false input.focus=true : mainwindow.macro=hotkeymode hotkey_toggle.is-checked=true mapwindow.map.focus=true\""
@@ -678,7 +672,7 @@ window "outputwindow"
 		font-family = "Book Antiqua"
 		font-size = 8
 		text-color = #e1e1d7
-		background-color = #392611
+		background-color = #050301
 		saved-params = "is-checked"
 		text = "Chat"
 		command = ".winset \"saybutton.is-checked=true?input.command=\"!say \\\"\" macrobutton.is-checked=false:input.command=\""
@@ -691,7 +685,7 @@ window "outputwindow"
 		anchor2 = 100,100
 		font-family = "Book Antiqua"
 		font-size = 8
-		background-color = #a68b7d
+		background-color = #F4F1EF
 		is-default = true
 		border = sunken
 		saved-params = ""
@@ -703,7 +697,7 @@ window "outputwindow"
 		anchor2 = 100,100
 		font-family = "Book Antiqua,Bookman Old Style,@SimSun-ExtB"
 		font-size = 9
-		background-color = #392611
+		background-color = #050301
 		is-default = true
 		saved-params = "max-lines"
 		style = ".system {color:#ff0000;}"
@@ -738,7 +732,7 @@ window "infowindow"
 		size = 420x477
 		anchor1 = none
 		anchor2 = none
-		background-color = #271a0c
+		background-color = #030201
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Info"
 		titlebar = false
@@ -756,13 +750,13 @@ window "infowindow"
 		font-family = "Book Antiqua"
 		font-size = 8
 		text-color = #e1e1d7
-		background-color = #271a0c
+		background-color = #030201
 		is-default = true
 		drop-zone = false
 		saved-params = ""
-		highlight-color = #ff8040
+		highlight-color = #ffaaaa
 		tab-text-color = #e1e1d7
-		tab-background-color = #271a0c
+		tab-background-color = #030201
 		tab-font-family = "Book Antiqua"
 		tab-font-size = 9
 		on-show = ".winset\"rpane.infob.is-visible=true;rpane.browseb.is-visible=true?rpane.infob.pos=130,0:rpane.infob.pos=65,0 rpane.textb.is-visible=true rpane.infob.is-checked=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=infowindow\""
@@ -775,7 +769,7 @@ window "rpane"
 		size = 420x457
 		anchor1 = none
 		anchor2 = none
-		background-color = #271a0c
+		background-color = #030201
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -789,7 +783,7 @@ window "rpane"
 		size = 420x482
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = #271a0c
+		background-color = #030201
 		saved-params = "splitter"
 		left = "buttons"
 		right = "outputwindow"
@@ -805,7 +799,7 @@ window "rpane"
 		font-size = 12
 		font-style = "bold italic"
 		text-color = #e1e1d7
-		background-color = #271a0c
+		background-color = #030201
 		saved-params = ""
 		text = "Civilization 13"
 

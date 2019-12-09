@@ -68,7 +68,7 @@ body
 {
 	padding: 0;
 	margin: 0;
-	background-color: #271a0c;
+	background-color: #030201;
 	font-size: 12px;
 	color: #ffffff;
 	line-height: 170%;
@@ -76,7 +76,7 @@ body
 
 hr
 {
-	background-color: #271a0c;
+	background-color: #030201;
 	height: 1px;
 }
 
