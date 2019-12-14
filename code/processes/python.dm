@@ -18,7 +18,7 @@
 				command = "[command] [argument]"
 			log_debug("Executing python3 command '[command]'")
 			last = world.realtime
-			return shell("sudo python3 [getScriptDir()]/[command]")
+			return shell("cd /home/tgstation/repos/civ && python3 [getScriptDir()]/[command]")
 		else
 			log_debug("python mapswap already running!")
 			return FALSE
