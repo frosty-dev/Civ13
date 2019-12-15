@@ -1,75 +1,6 @@
-var/list/department_radio_keys = list(
-	  //":r" = "right ear",	".r" = "right ear",
-	//  ":l" = "left ear",	".l" = "left ear",
-	  ":i" = "intercom",	".i" = "intercom",
-	//  ":b" = "harness", 	".b" = "harness",
-	  ":h" = "department",	".h" = "department",
-	  ":+" = "special",		".+" = "special", //activate radio-specific special functions
-	  ":c" = "Command",		".c" = "Command",
-	  ":n" = "Science",		".n" = "Science",
-	  ":m" = "Medical",		".m" = "Medical",
-	  ":e" = "crafting", ".e" = "crafting",
-	  ":s" = "Security",	".s" = "Security",
-	  ":w" = "whisper",		".w" = "whisper",
-	  ":t" = "Mercenary",	".t" = "Mercenary",
-	  ":u" = "Supply",		".u" = "Supply",
-	  ":v" = "Service",		".v" = "Service",
-	  ":p" = "AI Private",	".p" = "AI Private",
-	  ":z" = "Entertainment",".z" = "Entertainment",
-
-	  ":R" = "right ear",	".R" = "right ear",
-	  ":L" = "left ear",	".L" = "left ear",
-	  ":I" = "intercom",	".I" = "intercom",
-	  ":B" = "harness", 	".B" = "harness",
-	  ":H" = "department",	".H" = "department",
-	  ":C" = "Command",		".C" = "Command",
-	  ":N" = "Science",		".N" = "Science",
-	  ":M" = "Medical",		".M" = "Medical",
-	  ":E" = "crafting",	".E" = "crafting",
-	  ":S" = "Security",	".S" = "Security",
-	  ":W" = "whisper",		".W" = "whisper",
-	  ":T" = "Mercenary",	".T" = "Mercenary",
-	  ":U" = "Supply",		".U" = "Supply",
-	  ":V" = "Service",		".V" = "Service",
-	  ":P" = "AI Private",	".P" = "AI Private",
-	  ":Z" = "Entertainment",".Z" = "Entertainment",
-
-	  //kinda localization -- rastaf0
-	  //same keys as above, but on russian keyboard layout. This file uses cp1251 as encoding.
-	  ":к" = "right ear",	".к" = "right ear",
-	  ":д" = "left ear",	".д" = "left ear",
-	  ":ш" = "intercom",	".ш" = "intercom",
-	 // ":b" = "harness", 	".b" = "harness", someone russian needs to handle this
-	  ":р" = "department",	".р" = "department",
-	  ":с" = "Command",		".с" = "Command",
-	  ":т" = "Science",		".т" = "Science",
-	  ":ь" = "Medical",		".ь" = "Medical",
-	  ":у" = "crafting",	".у" = "crafting",
-	  ":ы" = "Security",	".ы" = "Security",
-	  ":ц" = "whisper",		".ц" = "whisper",
-	  ":е" = "Mercenary",	".е" = "Mercenary",
-	  ":г" = "Supply",		".г" = "Supply",
-	  ":м" = "Service",		".м" = "Service",
-	  ":з" = "AI Private",	".з" = "AI Private",
-	  ":z" = "Entertainment",".z" = "Entertainment",
-)
 
 var/list/radio_prefixes = list(";", ":b", ":l", ":r", ":t", ":f",
 	":B", ":L", ":R", ":T", ":F")
-
-var/list/channel_to_radio_key = new
-proc/get_radio_key_from_channel(var/channel)
-	var/key = channel_to_radio_key[channel]
-	if (!key)
-		for (var/radio_key in department_radio_keys)
-			if (department_radio_keys[radio_key] == channel)
-				key = radio_key
-				break
-		if (!key)
-			key = ""
-		channel_to_radio_key[channel] = key
-
-	return key
 
 /mob/living/proc/binarycheck()
 	return FALSE
@@ -132,18 +63,9 @@ proc/get_radio_key_from_channel(var/channel)
 			return say_dead(message)
 		return
 
-	var/message_mode = parse_message_mode(message, "headset")
-
 	switch(copytext_char(message,1,2))
 		if ("*") return emote(copytext_char(message,2))
 		if ("^") return custom_emote(1, copytext_char(message,2))
-
-	//parse the radio code and consume it
-	if (message_mode)
-		if (message_mode == "headset")
-			message = copytext_char(message,2)	//it would be really nice if the parse procs could do this for us.
-		else
-			message = copytext_char(message,3)
 
 	message = trim_left(message)
 

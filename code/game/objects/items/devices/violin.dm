@@ -368,8 +368,8 @@
 				var/tempo = 5
 				if (!lines || !lines.len)
 					return
-				if (copytext_char(lines[1],1,6) == "BPM: ")
-					tempo = 600 / text2num(copytext_char(lines[1],6))
+				if (copytext(lines[1],1,6) == "BPM: " && text2num(copytext(lines[1],6)))
+					tempo = 600 / text2num(copytext(lines[1],6))
 					lines.Cut(1,2)
 				if (lines.len > MAX_CHARS_PER_LINE)
 					usr << "Too many lines!"
