@@ -27,7 +27,7 @@
  */
 
 //Used for preprocessing entered text
-/proc/sanitize(var/input, var/max_length = MAX_MESSAGE_LEN, var/encode = TRUE, var/trim = TRUE, var/extra = TRUE)
+/proc/sanitize(var/input, var/max_length = MAX_MESSAGE_LEN, var/encode = TRUE, var/trim = FALSE, var/extra = TRUE)
 	if (!input)
 		return
 
